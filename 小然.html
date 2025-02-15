@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日祝福</title>
+    <style>
+        body {
+            background-image: url('5cb5a8d9d79f8a79b0936336494d38be.jpg'); /* 设置背景图片路径 */
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .message-box {
+            width: 60%;
+            height: 150px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 24px; /* 增大字体 */
+            background-color: rgba(255, 255, 255, 0); /* 设置背景透明 */
+            border: none;
+            resize: none;
+            color: white; /* 设置字体颜色为白色，以便在深色背景上清晰可见 */
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #play-music-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<audio id="background-music" src="薛之谦 - 彩券.mp3" loop></audio> <!-- 确认路径正确 -->
+
+<textarea class="message-box" readonly>小然生日快乐！擅自主张用你的照片做了一个小玩意，想给一点惊喜给你。但是学的时候没认真学了点皮毛导致结果有点粗糙，希望不要介意。岁岁平，岁岁安，岁岁平安；年年顺，年年好，年年顺好；希望小然永远17岁，永远阳光明媚，眼中有日月，心中有星辰。生日快乐！</textarea> <!-- 预先写好的祝福 -->
+<button id="play-music-button" onclick="playMusic()">播放音乐</button> <!-- 手动播放按钮 -->
+
+<script>
+    function playMusic() {
+        const music = document.getElementById('background-music');
+        music.play();
+    }
+</script>
+</body>
+</html>
+
